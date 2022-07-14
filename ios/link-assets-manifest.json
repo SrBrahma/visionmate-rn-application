@@ -1,0 +1,33 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/bgpattern.png",
+      "sha1": "3d5b4c68402c82aba42ad9a21f28faa582809978"
+    },
+    {
+      "path": "assets/fonts/DMSans-Medium.ttf",
+      "sha1": "afe77e497ca69c2e83ade71a6acb5036393db1f1"
+    },
+    {
+      "path": "assets/fonts/DMSans-Regular.ttf",
+      "sha1": "f1cf9ed15e1ec1db951c401233655dbbd304c732"
+    },
+    {
+      "path": "assets/fonts/Inter-Medium.ttf",
+      "sha1": "a418a8ba73bbcfa8c131c426ab836d78457afa9b"
+    },
+    {
+      "path": "assets/fonts/Inter-Regular.ttf",
+      "sha1": "7237d9cf55f177702066a28a4dde1e4c7e8ab576"
+    },
+    {
+      "path": "assets/visionmate-logo.png",
+      "sha1": "470bf8384a4c802c9fd0b1acf53240bdf69fa20f"
+    },
+    {
+      "path": "assets/visionmate-video.mp4",
+      "sha1": "b64592ae5c560b8ca91005c32cf35324e5ef783c"
+    }
+  ]
+}

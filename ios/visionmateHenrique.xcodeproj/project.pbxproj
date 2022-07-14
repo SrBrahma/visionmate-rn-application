@@ -14,6 +14,13 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-visionmateHenrique-visionmateHenriqueTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-visionmateHenrique-visionmateHenriqueTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		F420E4291CA44752ADECC5D4 /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01BB68E71E8F4D37B9C46E61 /* DMSans-Medium.ttf */; };
+		B63DBEA0D6D14F939E3B8798 /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30672579DF9E4500A980FC25 /* DMSans-Regular.ttf */; };
+		9C9BCF5D1B1B48AAB05AD182 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA2CEF1F7DBB4A1C8AAFC5C1 /* Inter-Medium.ttf */; };
+		2D7B4090C49643029D8AC09F /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80BD7533ACEE4265B917CD66 /* Inter-Regular.ttf */; };
+		AD75F72ED3BB4483BF73C8F7 /* bgpattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D336D87A47645B495F5B691 /* bgpattern.png */; };
+		5581C2032B554563A72B4352 /* visionmate-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C58ED770BC41ACA97FF2EF /* visionmate-logo.png */; };
+		0F110D64FC9941E693945726 /* visionmate-video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6695CE174493487E8F13E128 /* visionmate-video.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,13 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = visionmateHenrique/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-visionmateHenrique-visionmateHenriqueTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-visionmateHenrique-visionmateHenriqueTests.release.xcconfig"; path = "Target Support Files/Pods-visionmateHenrique-visionmateHenriqueTests/Pods-visionmateHenrique-visionmateHenriqueTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		01BB68E71E8F4D37B9C46E61 /* DMSans-Medium.ttf */ = {isa = PBXFileReference; name = "DMSans-Medium.ttf"; path = "../assets/fonts/DMSans-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		30672579DF9E4500A980FC25 /* DMSans-Regular.ttf */ = {isa = PBXFileReference; name = "DMSans-Regular.ttf"; path = "../assets/fonts/DMSans-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DA2CEF1F7DBB4A1C8AAFC5C1 /* Inter-Medium.ttf */ = {isa = PBXFileReference; name = "Inter-Medium.ttf"; path = "../assets/fonts/Inter-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		80BD7533ACEE4265B917CD66 /* Inter-Regular.ttf */ = {isa = PBXFileReference; name = "Inter-Regular.ttf"; path = "../assets/fonts/Inter-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9D336D87A47645B495F5B691 /* bgpattern.png */ = {isa = PBXFileReference; name = "bgpattern.png"; path = "../assets/bgpattern.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D6C58ED770BC41ACA97FF2EF /* visionmate-logo.png */ = {isa = PBXFileReference; name = "visionmate-logo.png"; path = "../assets/visionmate-logo.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6695CE174493487E8F13E128 /* visionmate-video.mp4 */ = {isa = PBXFileReference; name = "visionmate-video.mp4"; path = "../assets/visionmate-video.mp4"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +136,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				98136CB6190640EC92D82B1D /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -147,6 +162,21 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		98136CB6190640EC92D82B1D /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				01BB68E71E8F4D37B9C46E61 /* DMSans-Medium.ttf */,
+				30672579DF9E4500A980FC25 /* DMSans-Regular.ttf */,
+				DA2CEF1F7DBB4A1C8AAFC5C1 /* Inter-Medium.ttf */,
+				80BD7533ACEE4265B917CD66 /* Inter-Regular.ttf */,
+				9D336D87A47645B495F5B691 /* bgpattern.png */,
+				D6C58ED770BC41ACA97FF2EF /* visionmate-logo.png */,
+				6695CE174493487E8F13E128 /* visionmate-video.mp4 */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -244,6 +274,13 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				F420E4291CA44752ADECC5D4 /* DMSans-Medium.ttf in Resources */,
+				B63DBEA0D6D14F939E3B8798 /* DMSans-Regular.ttf in Resources */,
+				9C9BCF5D1B1B48AAB05AD182 /* Inter-Medium.ttf in Resources */,
+				2D7B4090C49643029D8AC09F /* Inter-Regular.ttf in Resources */,
+				AD75F72ED3BB4483BF73C8F7 /* bgpattern.png in Resources */,
+				5581C2032B554563A72B4352 /* visionmate-logo.png in Resources */,
+				0F110D64FC9941E693945726 /* visionmate-video.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

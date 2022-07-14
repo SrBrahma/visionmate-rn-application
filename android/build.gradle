@@ -5,7 +5,7 @@ import org.apache.tools.ant.taskdefs.condition.Os
 buildscript {
     ext {
         buildToolsVersion = "31.0.0"
-        minSdkVersion = 21
+        minSdkVersion = 26
         compileSdkVersion = 31
         targetSdkVersion = 31
 
@@ -49,5 +49,10 @@ allprojects {
         }
         google()
         maven { url 'https://www.jitpack.io' }
+        jcenter() {
+            content {
+                includeModule("com.yqritc", "android-scalablevideoview")
+            }
+        }
     }
 }
