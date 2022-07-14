@@ -9,13 +9,15 @@
 
 <!-- descriptionHere -->
 
-Technical test for Visionmate made in 2 days by me, Henrique Almeida (SrBrahma). [Specifications](https://docs.google.com/document/d/11f0WuoDrUD9YkI0mEofYt246VmZW83o7xZkCCbgCBG4/edit?usp=sharing).
+Technical test for Visionmate made in 2~3 days by me, Henrique Almeida (SrBrahma). [Specifications](https://docs.google.com/document/d/11f0WuoDrUD9YkI0mEofYt246VmZW83o7xZkCCbgCBG4/edit?usp=sharing).
+
+The recording has a bit of lag.
 
 When I was thinking about its color pallete and its UI, I remembered Visionmate has a website and I decided to not only follow its color scheme but to also add its hero video, the diagonal pattern present above the video and its logo.
 
 Project created using my [gev](https://github.com/SrBrahma/gev) npx tool, with the `rn` flavor to create React Native projects within a single command with my commonly used configs, such as my [eslint-config](https://github.com/SrBrahma/eslint-config-gev) and directories tree.
 
-I tried to balance the quality and not overdoing it (but still, turned out to be great in just 2 days!). Some further improvements could be done, such as:
+I tried to balance the quality and not overdoing it (but still, turned out to be great in just a few days of work!). Some further improvements could be done, such as:
 
 * Use https://github.com/Flipkart/recyclerlistview in the Users List for improved list performance
 
