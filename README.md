@@ -5,23 +5,19 @@
 [![TypeScript](https://badgen.net/npm/types/env-var)](http://www.typescriptlang.org/)
 </div>
 
-# Visionmate Techinical Test - Henrique Almeida
+# Visionmate Techinical Test
 
 <!-- descriptionHere -->
 
-Technical test for Visionmate made in 2 days. [Specifications](https://docs.google.com/document/d/11f0WuoDrUD9YkI0mEofYt246VmZW83o7xZkCCbgCBG4/edit?usp=sharing).
+Technical test for Visionmate made in 2 days by me, Henrique Almeida (SrBrahma). [Specifications](https://docs.google.com/document/d/11f0WuoDrUD9YkI0mEofYt246VmZW83o7xZkCCbgCBG4/edit?usp=sharing).
 
 When I was thinking about its color pallete and its UI, I remembered Visionmate has a website and I decided to not only follow its color scheme but to also add its hero video, the diagonal pattern present above the video and its logo.
 
 Project created using my [gev](https://github.com/SrBrahma/gev) npx tool, with the `rn` flavor to create React Native projects within a single command with my commonly used configs, such as my [eslint-config](https://github.com/SrBrahma/eslint-config-gev) and directories tree.
 
-I took advantage of this project and used React-Query v4 to learn about it, still on beta but with [relevant improvements](https://tanstack.com/query/v4/docs/guides/migrating-to-react-query-4). [Installation](https://github.com/TanStack/query/issues/3790#issuecomment-1179431860).
-
-I tried to balance the quality and not overdoing it. Some further improvements could be done, such as:
+I tried to balance the quality and not overdoing it (but still, turned out to be great in just 2 days!). Some further improvements could be done, such as:
 
 * Use https://github.com/Flipkart/recyclerlistview in the Users List for improved list performance
-
-* The search bar could be on the Navigation's Header, but for time saving and just proof-of-concept I decided to leave it on the top of the Users List.
 
 <br/>
 
@@ -57,16 +53,17 @@ Also: https://reactnative.dev/docs/running-on-device
 ## ℹ️ Info
 
 * Uses JSX transform so `import React from 'react'` isn't required:
-https://aryan-mittal.medium.com/enable-the-new-jsx-transform-in-react-native-0-64-aea4f686a640
+https://aryan-mittal.medium.com/enable-the-new-jsx-transform-in-react-native-0-64-aea4f686a640, https://github.com/facebook/metro/issues/646#issuecomment-799174473
 
-https://github.com/facebook/metro/issues/646#issuecomment-799174473
 
-* [Do use `npx react-native-asset` for adding fonts to react-native@>0.69](https://github.com/facebook/react-native/issues/34095#issuecomment-1174864177)
+* Disabled Android's automatic forced dark mode: https://stackoverflow.com/a/64339016
 
-* Disabled automatic forced dark mode: https://stackoverflow.com/a/64339016
+* We use [Fuse.js](https://github.com/krisk/Fuse) as the fuzzy-search library. It's great!
 
 * We use react-native-video@next (v6) since v5 is broken.
 
-* We use [Fuse.js](https://github.com/krisk/Fuse) as the fuzzy-search library.
-
 * I haven't tested it on iOS as at the moment I don't have access to XCode and my (MacInCloud)[https://www.macincloud.com/] subscription isn't active.
+
+* I took advantage of this project and used React-Query v4 to learn about it, still on beta but with [relevant improvements](https://tanstack.com/query/v4/docs/guides/migrating-to-react-query-4). [Installation](https://github.com/TanStack/query/issues/3790#issuecomment-1179431860).
+
+* [Do use `npx react-native-asset` for adding fonts to react-native@>0.69](https://github.com/facebook/react-native/issues/34095#issuecomment-1174864177)
