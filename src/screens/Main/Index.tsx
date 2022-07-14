@@ -113,8 +113,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'space-between',
-    paddingTop: '45%',
-    paddingBottom: '12%',
+    paddingTop: '43%',
+    paddingBottom: '14%',
   },
   bgPattern: {
     ...StyleSheet.absoluteFillObject,
@@ -135,10 +135,11 @@ const styles = StyleSheet.create({
     aspectRatio: 775 / 533,
   },
   about: {
-    marginTop: 32,
+    marginTop: 35,
     fontSize: 18,
     textAlign: 'center',
     color: '#fffd',
-    textDecorationLine: 'underline'
+    textDecorationLine: 'underline',
+    fontFamily: 'DMSans-Medium'
   }
 });
