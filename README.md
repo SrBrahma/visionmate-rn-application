@@ -7,11 +7,11 @@
 
 # Visionmate Techinical Test
 
-<!-- descriptionHere -->
+https://user-images.githubusercontent.com/28177550/179091624-1fc6bfad-aba4-40c6-b703-6039ce1ded04.mp4
 
 Technical test for Visionmate made in 2~3 days by me, Henrique Almeida (SrBrahma). [Specifications](https://docs.google.com/document/d/11f0WuoDrUD9YkI0mEofYt246VmZW83o7xZkCCbgCBG4/edit?usp=sharing).
 
-The recording has a bit of lag.
+The recording of the app made it a bit laggy.
 
 When I was thinking about its color pallete and its UI, I remembered Visionmate has a website and I decided to not only follow its color scheme but to also add its hero video, the diagonal pattern present above the video and its logo.
 
