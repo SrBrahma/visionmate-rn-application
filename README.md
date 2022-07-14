@@ -9,7 +9,7 @@
 
 https://user-images.githubusercontent.com/28177550/179091624-1fc6bfad-aba4-40c6-b703-6039ce1ded04.mp4
 
-Technical test for Visionmate made in 2~3 days by me, Henrique Almeida (SrBrahma). [Specifications](https://docs.google.com/document/d/11f0WuoDrUD9YkI0mEofYt246VmZW83o7xZkCCbgCBG4/edit?usp=sharing).
+Technical test for Visionmate made in 2~3 days by me, Henrique Almeida (SrBrahma). [Specifications](https://github.com/SrBrahma/visionmate-rn-application/blob/main/specifications.md).
 
 The recording of the app made it a bit laggy.
 
