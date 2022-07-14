@@ -1,0 +1,39 @@
+Date : 2022-07-14 22:32:06
+Directory : /home/hb/Dev/visionmateHenrique/src
+Total : 9 files,  689 codes, 37 comments, 97 blanks, all 823 lines
+
+Languages
++------------------+------------+------------+------------+------------+------------+
+| language         | files      | code       | comment    | blank      | total      |
++------------------+------------+------------+------------+------------+------------+
+| TypeScript React |          6 |        583 |         21 |         73 |        677 |
+| TypeScript       |          3 |        106 |         16 |         24 |        146 |
++------------------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                       | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                          |          9 |        689 |         37 |         97 |        823 |
+| components                                                 |          1 |        120 |          4 |         14 |        138 |
+| main                                                       |          4 |        132 |         17 |         30 |        179 |
+| main/utils                                                 |          1 |          5 |          9 |          0 |         14 |
+| screens                                                    |          4 |        437 |         16 |         53 |        506 |
+| screens/Main                                               |          4 |        437 |         16 |         53 |        506 |
++------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| filename                                                   | language         | code       | comment    | blank      | total      |
++------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| /home/hb/Dev/visionmateHenrique/src/components/Header.tsx  | TypeScript React |        120 |          4 |         14 |        138 |
+| /home/hb/Dev/visionmateHenrique/src/main/App.tsx           | TypeScript React |         26 |          1 |          6 |         33 |
+| /home/hb/Dev/visionmateHenrique/src/main/constsUi.ts       | TypeScript       |          6 |          1 |          0 |          7 |
+| /home/hb/Dev/visionmateHenrique/src/main/users.ts          | TypeScript       |         95 |          6 |         24 |        125 |
+| /home/hb/Dev/visionmateHenrique/src/main/utils/utils.ts    | TypeScript       |          5 |          9 |          0 |         14 |
+| /home/hb/Dev/visionmateHenrique/src/screens/Main/Index.tsx | TypeScript React |        128 |          4 |         13 |        145 |
+| /home/hb/Dev/visionmateHenrique/src/screens/Main/Root.tsx  | TypeScript React |         34 |          1 |          6 |         41 |
+| /home/hb/Dev/visionmateHenrique/src/screens/Main/User.tsx  | TypeScript React |        107 |          1 |         10 |        118 |
+| /home/hb/Dev/visionmateHenrique/src/screens/Main/Users.tsx | TypeScript React |        168 |         10 |         24 |        202 |
+| Total                                                      |                  |        689 |         37 |         97 |        823 |
++------------------------------------------------------------+------------------+------------+------------+------------+------------+
