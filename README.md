@@ -66,7 +66,7 @@ https://aryan-mittal.medium.com/enable-the-new-jsx-transform-in-react-native-0-6
 
 * We use react-native-video@next (v6) since v5 is broken.
 
-* I haven't tested it on iOS as at the moment I don't have access to XCode and my (MacInCloud)[https://www.macincloud.com/] subscription isn't active.
+* I haven't tested it on iOS as at the moment I don't have access to XCode and my [MacInCloud](https://www.macincloud.com) subscription isn't active.
 
 * I took advantage of this project and used React-Query v4 to learn about it, still on beta but with [relevant improvements](https://tanstack.com/query/v4/docs/guides/migrating-to-react-query-4). [Installation](https://github.com/TanStack/query/issues/3790#issuecomment-1179431860).
 
