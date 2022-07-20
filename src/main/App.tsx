@@ -7,7 +7,14 @@ import { Root_Navigator } from '../screens/Main/Root';
 
 
 
-const queryClient = new QueryClient({});
+const queryClient = new QueryClient({
+  // Mute errors logs https://github.com/TanStack/query/issues/125
+  logger: {
+    log: () => {},
+    warn: () => {},
+    error: () => {},
+  },
+});
 
 // Sets the app's background color https://reactnavigation.org/docs/themes/#basic-usage
 const navTheme: Theme = {
