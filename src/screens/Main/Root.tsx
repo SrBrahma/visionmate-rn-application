@@ -10,7 +10,10 @@ import { Screen_Users, usersSearchPlaceholder } from './Users';
 export type ParamList_Root = {
   Index: undefined;
   Users: undefined;
-  User: { uid: string };
+  User: {
+    uid?: string;
+    getRandom?: boolean;
+  };
 };
 
 export type ScreenProps_Root<S extends keyof ParamList_Root = keyof ParamList_Root> = StackScreenProps<ParamList_Root, S>;

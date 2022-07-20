@@ -1,8 +1,12 @@
+import { useCallback, useState } from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import FastImage from 'react-native-fast-image';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { useFocusEffect } from '@react-navigation/native';
+import { ErrorScreen } from '../../components/ErrorScreen';
+import { LoadingScreen } from '../../components/LoadingScreen';
 import { Colors } from '../../main/constsUi';
 import { useUsersQuery } from '../../main/users';
+import { getRandomInt } from '../../main/utils/utils';
 import type { ScreenProps_Root } from './Root';
 
 
@@ -21,16 +25,39 @@ function Row({ header, value }: {header: string; value: string | number}) {
 export function Screen_User({ route }: ScreenProps_Root<'User'>): JSX.Element {
 
   const usersQuery = useUsersQuery();
+  const users = usersQuery.data;
 
-  const user = usersQuery.data?.find((user) => user.login.uuid === route.params.uid);
+  const [uid, setUid] = useState<string | null>(() => {
+    return route.params.uid ?? null;
+  });
+
+  // With useFocusEffect, it's only called after each render if the screen is focused.
+  // https://reactnavigation.org/docs/use-focus-effect/
+  useFocusEffect(useCallback(() => {
+    if (users && route.params.getRandom) {
+      const userIndex = getRandomInt(0, users.length - 1);
+      const uid = users[userIndex]!.login.uuid;
+      setUid(uid);
+    }
+  }, [route.params.getRandom, users]));
+
+  const refetch = useCallback(() => {
+    void usersQuery.refetch();
+  }, [usersQuery]);
+
+  if (usersQuery.isFetching)
+    return <LoadingScreen/>;
+
+  if (usersQuery.error)
+    return <ErrorScreen error={usersQuery.error} onRetryPress={refetch}/>;
+
+  if (!users)
+    return <ErrorScreen error='There are no available users.'/>;
+
+  const user = users.find((user) => user.login.uuid === uid);
 
   if (!user)
-    return (
-      <View style={styles.errorContainer}>
-        <MaterialCommunityIcons name='robot-dead-outline' style={styles.errorIcon}/>
-        <Text style={styles.errorText}>{'An error occurred while loading this user.'}</Text>
-      </View>
-    );
+    return <ErrorScreen error='An error occurred while loading this user.'/>;
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
@@ -95,24 +122,6 @@ const styles = StyleSheet.create({
     fontSize: 15,
     textAlign: 'right',
     color: Colors.text,
-    flexGrow: 1,
-  },
-  errorContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  errorIcon: {
-    color: Colors.text,
-    fontSize: 120,
-  },
-  errorText: {
-    color: Colors.text,
-    fontSize: 18,
-    fontFamily: 'Inter-Medium',
-    marginTop: '5%',
-    marginBottom: '25%',
-    marginHorizontal: 30,
-    textAlign: 'center',
+    flexShrink: 1, // Break line if needed
   },
 });

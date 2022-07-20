@@ -1,11 +1,10 @@
 import { useCallback } from 'react';
-import { Linking, StyleProp, ViewStyle } from 'react-native';
-import { Alert, Dimensions, Image, Pressable, StatusBar, StyleSheet, Text, View } from 'react-native';
+import type { StyleProp, ViewStyle } from 'react-native';
+import { Dimensions, Image, Linking, Pressable, StatusBar, StyleSheet, Text, View } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Video from 'react-native-video';
 import { Colors } from '../../main/constsUi';
 import { useUsersQuery } from '../../main/users';
-import { getRandomInt } from '../../main/utils/utils';
 import type { ScreenProps_Root } from './Root';
 
 
@@ -66,17 +65,13 @@ const stylesButton = StyleSheet.create({
 
 export function Screen_Index({ navigation }: ScreenProps_Root<'Index'>): JSX.Element {
 
-  const usersQuery = useUsersQuery();
+  // Fetch data before requested.
+  useUsersQuery();
 
-  const navigateToRandomUser = useCallback(() => {
-    const users = usersQuery.data;
-    if (!users?.length) {
-      Alert.alert('Error', 'There are no available users.');
-      return;
-    }
-    const userIndex = getRandomInt(0, users.length - 1);
-    navigation.navigate('User', { uid: users[userIndex]!.login.uuid });
-  }, [navigation, usersQuery.data]);
+  const onAboutPress = useCallback(() => {
+    void Linking.openURL('https://github.com/SrBrahma/visionmate-rn-application');
+  }, []);
+
 
   return (<View style={styles.container}>
     {/* Hides Android's StatusBar so Video is fullscreen */}
@@ -93,16 +88,9 @@ export function Screen_Index({ navigation }: ScreenProps_Root<'Index'>): JSX.Ele
     <Image source={require('../../../assets/visionmate-logo.png')} style={styles.logo}/>
     <View style={{ alignSelf: 'center', alignItems: 'stretch' }}>
       <Button text='List Users' iconName='format-list-text' onPress={() => navigation.navigate('Users')}/>
-      <Button text='Randomize User' iconName='dice-multiple-outline' onPress={navigateToRandomUser} containerStyle={{ marginTop: 26 }}/>
-      <Text
-      style={styles.about}
-
-      onPress={() => Linking.openURL('https://github.com/SrBrahma/visionmate-rn-application')}
-    >
-      {'About'}
-    </Text>
+      <Button text='Randomize User' iconName='dice-multiple-outline' onPress={() => navigation.navigate('User', { getRandom: true })} containerStyle={{ marginTop: 26 }}/>
+      <Text onPress={onAboutPress} style={styles.about}>{'About'}</Text>
     </View>
-
   </View>);
 }
 
@@ -140,6 +128,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#fffd',
     textDecorationLine: 'underline',
-    fontFamily: 'DMSans-Medium'
-  }
+    fontFamily: 'DMSans-Medium',
+  },
 });

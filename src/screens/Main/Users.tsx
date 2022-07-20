@@ -1,10 +1,12 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Pressable, RefreshControl, StyleSheet, Text, View } from 'react-native';
 import FastImage from 'react-native-fast-image';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { FlashList } from '@shopify/flash-list';
 import Fuse from 'fuse.js';
+import { ErrorScreen } from '../../components/ErrorScreen';
 import { Header } from '../../components/Header';
+import { LoadingScreen } from '../../components/LoadingScreen';
 import { Colors } from '../../main/constsUi';
 import type { User } from '../../main/users';
 import { useUsersQuery } from '../../main/users';
@@ -129,7 +131,7 @@ const stylesItem = StyleSheet.create({
 
 
 
-export function Screen_Users({ navigation, route }: ScreenProps_Root<'Users'>): JSX.Element {
+export function Screen_Users({ navigation }: ScreenProps_Root<'Users'>): JSX.Element {
 
   const [searchText, setSearchText] = useState('');
 
@@ -178,13 +180,26 @@ export function Screen_Users({ navigation, route }: ScreenProps_Root<'Users'>): 
     return <UserItem user={user} onPress={onUserItemPress} isOrange={!!selectedUid && user.login.uuid !== selectedUid} onOrangePress={onOrangePress}/>;
   }, [onOrangePress, onUserItemPress]);
 
+  const refetch = useCallback(() => {
+    void usersQuery.refetch();
+  }, [usersQuery]);
+
+  if (usersQuery.isFetching)
+    return <LoadingScreen/>;
+
+  if (usersQuery.error)
+    return <ErrorScreen error={usersQuery.error} onRetryPress={refetch}/>;
+
   return (
     <FlashList
       extraData={selectedUid}
       estimatedItemSize={90}
+      refreshControl={<RefreshControl
+        colors={[Colors.primary]}
+        refreshing={usersQuery.isRefetching}
+        onRefresh={refetch}
       />}
       keyboardShouldPersistTaps='never'
-      removeClippedSubviews
       data={filteredData}
       renderItem={renderItem}
       keyExtractor={(user) => user.login.uuid}
@@ -192,6 +207,7 @@ export function Screen_Users({ navigation, route }: ScreenProps_Root<'Users'>): 
     />
   );
 }
+
 
 const styles = StyleSheet.create({
   separator: {
