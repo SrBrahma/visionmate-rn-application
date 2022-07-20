@@ -14,6 +14,11 @@ const queryClient = new QueryClient({
     warn: () => {},
     error: () => {},
   },
+  defaultOptions: {
+    queries: {
+      retry: false, // Just for better error and loading demonstration.
+    },
+  },
 });
 
 // Sets the app's background color https://reactnavigation.org/docs/themes/#basic-usage
