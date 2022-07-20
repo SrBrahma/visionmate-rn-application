@@ -13,8 +13,8 @@ export type Users = User[];
 async function getUsers(): Promise<Users> {
   const usersToFetch = 200;
 
-  // Comment/uncomment to set a fake await time. Beware React Query will recall on error a few times.
-  // await new Promise<void>((res) => setTimeout(res, 500));
+  // Comment/uncomment to set a fake await time.
+  // await new Promise<void>((res) => setTimeout(res, 3000));
 
   // Comment/uncomment to set a forced error.
   // throw new Error('The system is under maintance.');
