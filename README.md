@@ -19,9 +19,7 @@ When I was thinking about its color pallete and its UI, I remembered Visionmate 
 
 Project created using my [gev](https://github.com/SrBrahma/gev) npx tool, with the `rn` flavor to create React Native projects within a single command with my commonly used configs, such as my [eslint-config](https://github.com/SrBrahma/eslint-config-gev) and directories tree.
 
-I tried to balance the quality and not overdoing it (but still, turned out to be great in just a few days of work!). Some further improvements could be done, such as:
-
-* Use https://github.com/Flipkart/recyclerlistview in the Users List for improved list performance
+I tried to balance the quality and not overdoing it (but still, turned out to be great in just a few days of work!).
 
 <br/>
 
@@ -62,6 +60,8 @@ https://aryan-mittal.medium.com/enable-the-new-jsx-transform-in-react-native-0-6
 * Disabled Android's automatic forced dark mode: https://stackoverflow.com/a/64339016
 
 * We use [Fuse.js](https://github.com/krisk/Fuse) as the fuzzy-search library. It's great!
+
+* And [FlashList](https://github.com/shopify/flash-list) for a FlatList with a way better performance!
 
 * We use react-native-video@next (v6) since v5 is broken.
 
