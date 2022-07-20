@@ -59,7 +59,6 @@ Also: https://reactnative.dev/docs/running-on-device
 * Uses JSX transform so `import React from 'react'` isn't required:
 https://aryan-mittal.medium.com/enable-the-new-jsx-transform-in-react-native-0-64-aea4f686a640, https://github.com/facebook/metro/issues/646#issuecomment-799174473
 
-
 * Disabled Android's automatic forced dark mode: https://stackoverflow.com/a/64339016
 
 * We use [Fuse.js](https://github.com/krisk/Fuse) as the fuzzy-search library. It's great!

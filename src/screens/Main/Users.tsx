@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native';
 import FastImage from 'react-native-fast-image';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { FlashList } from '@shopify/flash-list';
 import Fuse from 'fuse.js';
 import { Header } from '../../components/Header';
 import { Colors } from '../../main/constsUi';
@@ -173,13 +174,15 @@ export function Screen_Users({ navigation, route }: ScreenProps_Root<'Users'>): 
       setSelectedUid(user.login.uuid);
   }, [selectedUid]);
 
-  const renderItem = useCallback(({ item: user }: {item: User}) => {
+  const renderItem = useCallback(({ item: user, extraData: selectedUid }: {item: User; extraData?: string | null}) => {
     return <UserItem user={user} onPress={onUserItemPress} isOrange={!!selectedUid && user.login.uuid !== selectedUid} onOrangePress={onOrangePress}/>;
-  }, [onOrangePress, onUserItemPress, selectedUid]);
+  }, [onOrangePress, onUserItemPress]);
 
   return (
-    // https://reactnative.dev/docs/optimizing-flatlist-configuration
-    <FlatList
+    <FlashList
+      extraData={selectedUid}
+      estimatedItemSize={90}
+      />}
       keyboardShouldPersistTaps='never'
       removeClippedSubviews
       data={filteredData}
