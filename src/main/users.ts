@@ -17,7 +17,7 @@ async function getUsers(): Promise<Users> {
   // await new Promise<void>((res) => setTimeout(res, 3000));
 
   // Comment/uncomment to set a forced error.
-  // throw new Error('The system is under maintance.');
+  // throw new Error('The system is under maintenance.');
 
   return (await axios.get<ApiData>('https://randomuser.me/api', {
     params: {
